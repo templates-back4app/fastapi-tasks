@@ -4,7 +4,7 @@
 
 Measured on September 15–16, 2026, on Back4app Containers: Deploy click → `DEPLOYMENT READY` in **86 s**, the first `200` from the URL **17 s before** the dashboard said Ready, the full create/read/update/validate/delete round trip passing 12 s later. Every number in the article comes from this exact code.
 
-> **Read the article:** [Deploy a Python FastAPI App From a Dockerfile — With a Database, No Servers to Manage](https://www.back4app.com/blog/deploy-python-fastapi-dockerfile-database)
+> **Read the article:** [How to Deploy FastAPI With Docker and a Database, Without Managing a Server](https://www.back4app.com/blog/deploy-python-fastapi-dockerfile-database)
 
 ## What it does
 
