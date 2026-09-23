@@ -1,10 +1,12 @@
 # fastapi-tasks
 
+[![Deploy on Back4app](https://img.shields.io/badge/Deploy%20on-Back4app-1568B8?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJMMiA3djEwbDEwIDUgMTAtNVY3eiIvPjwvc3ZnPg==)](https://www.back4app.com/signup?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks)
+
 **Deploy a Python FastAPI app from a Dockerfile with a database and no server to run.** A task API in a container with no database driver: every task is one REST call to a managed [Back4app](https://www.back4app.com/) backend, and the validation rule lives there, not in Python. 80 lines of FastAPI, a 6-line Dockerfile, no connection string, no migrations.
 
 Measured on September 15–16, 2026, on Back4app Containers: Deploy click → `DEPLOYMENT READY` in **86 s**, the first `200` from the URL **17 s before** the dashboard said Ready, the full create/read/update/validate/delete round trip passing 12 s later. Every number in the article comes from this exact code.
 
-> **Read the article:** [How to Deploy FastAPI With Docker and a Database, Without Managing a Server](https://www.back4app.com/blog/deploy-python-fastapi-dockerfile-database)
+> **Read the article:** [How to Deploy FastAPI With Docker and a Database, Without Managing a Server](https://www.back4app.com/blog/deploy-python-fastapi-dockerfile-database?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks)
 
 ## What it does
 
@@ -43,7 +45,7 @@ client ──HTTP──▶ ┌────────────────�
 
 ## Deploy your own
 
-1. **Create a free account.** Sign up at [https://www.back4app.com/signup](https://www.back4app.com/signup). One account gives you both halves: **Build your Backend** (the Task class and its rule) and **Containers** (where the Dockerfile runs).
+1. **Create a free account.** Sign up at [https://www.back4app.com/signup?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks](https://www.back4app.com/signup?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks). One account gives you both halves: **Build your Backend** (the Task class and its rule) and **Containers** (where the Dockerfile runs).
 2. **Backend:** New App → Build your Backend. On Overview copy the App ID and the REST API key. **Cloud Code → main.js**: paste `cloud/main.js`, Deploy, then edit and deploy again (the first deploy on a fresh backend ships nothing); prove the hook with a request.
 3. **Container:** push this repo to GitHub, then **Containers → New App → Deploy from GitHub**. The form detects the Dockerfile. Set `PARSE_APP_ID` and `PARSE_REST_KEY` as environment variables and the health check to `/healthz`. Deploy.
 4. Verify: `./deploy-check.sh https://<your-app>.b4a.run`
@@ -61,7 +63,7 @@ set -a; . ./.env; set +a
 
 ## What the platform gives you
 
-Containers build the Dockerfile, run the image behind HTTPS on a public URL and redeploy on push. The backend is a managed Parse Server with a database, REST and GraphQL APIs, Cloud Code and a dashboard where every Task is a row you can inspect. Documentation: [https://www.back4app.com/docs-containers](https://www.back4app.com/docs-containers) · [https://www.back4app.com/docs](https://www.back4app.com/docs).
+Containers build the Dockerfile, run the image behind HTTPS on a public URL and redeploy on push. The backend is a managed Parse Server with a database, REST and GraphQL APIs, Cloud Code and a dashboard where every Task is a row you can inspect. Documentation: [https://www.back4app.com/docs-containers?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks](https://www.back4app.com/docs-containers?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks) · [https://www.back4app.com/docs?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks](https://www.back4app.com/docs?utm_source=github&utm_medium=repo&utm_campaign=fastapi-tasks).
 
 ## License
 
